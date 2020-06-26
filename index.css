@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+
+/* .background {
+    position: relative;
+}
+
+.img_background {
+    position: absolute;
+}
+
+.logo {
+    position: relative;
+} */
+
+span {
+    display: inline-block;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.card {
+    width: 304px;
+    background-color: #fff;
+    padding: 16px;
+    margin: 20px
+}
+
+.emblem img {
+    width: 20px;
+    margin-bottom: 10px;
+}
+
+.card__icon span {
+    color: rgb(40, 50, 71);
+    font-size: 20px;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.class {
+    font-size: 18px;
+    color: #1B2437;
+    font-weight: 500;
+    margin: 16px 0;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.btn__view {
+    flex-basis: 48%;
+    border-radius: 100px;
+    padding: 10px 10px 10px;
+    border: none;
+    background-color: #fff;
+    transition: all .5s;
+}
+
+.card__button {
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
+}
+
+.card__button a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn__icon {
+    color: #BFC5D1;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.card__thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+
+.imgbg {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imgcard {
+    position: relative;
+    z-index: 10;
+}
+
+.imgcard img {
+    transition: all .5s;
+}
+
+.imgcard img:hover {
+    transform: scale(1.5);
+}
+
+.btn__name {
+    color: #BFC5D1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #507BFC;
+}
+
+.btn:hover .btn__name,
+.btn:hover .btn__icon {
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row1 {
+    display: flex;
+    justify-content: center;
+}
+
+.row2 {
+    display: flex;
+    justify-content: center;
+}

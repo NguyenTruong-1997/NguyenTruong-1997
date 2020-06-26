@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate/Grand Order</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a3f2cd558d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <form action="/add" method="POST" class="add">
+        <input type="text" name="classEmblem" id="classEmblem" placeholder="Class Emblem">
+        <input type="text" name="img" id="img" placeholder="Ser img">
+        <input type="text" name="class" id="class" placeholder="Class">
+        <input type="text" name="name" id="name" placeholder="Ser name">
+        <button type="submit">Add card</button>
+    </form>
+
+    <form action="/fix" method="POST" class="add">
+        <input type="text" name="name" placeholder="Old name">
+        <input type="text" name="newName" placeholder="New name">
+        <button type="submit">Fix name</button>
+
+    </form>
+
+    <form action="/del" method="POST" class="add">
+        <input type="text" name="name" placeholder="Ser name">
+        <button type="submit">Del card</button>
+    </form>
+
+    <div class="background">
+        <img class="img_background" src="./img/kv.png" alt="Fate Requiem" style="width: 100%;">
+        <div class="logo_fate">
+            <img src="./img/logo.png" alt="logo">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row1">
+            <% for(let i=0 ; i < results.length/2; i++){ %>
+                <div class="card">
+                    <div class="emblem">
+                        <img src="<%= results[i].classEmblem %>" alt="class_emblem">
+                    </div>
+
+                    <div class="card__thumbnail" style="border: 1px inset cornflowerblue; border-radius: 50%;">
+                        <img class="imgbg" src="./img/bg_emblem.png" alt="emblem">
+                        <div class="imgcard">
+                            <img src="<%= results[i].img %>" alt="imgClass">
+                        </div>
+                    </div>
+
+                    <div class="card__info">
+                        <span><%= results[i].class %></span>
+                        <span><%= results[i].name %></span>
+                    </div>
+
+                    <div class="card__button">
+                        <a href="./class_content/saber.html" class="btn btn__view">
+                            <span class="btn__icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                            <span class="btn__name">View</span>
+                        </a>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+
+        <div class="row2">
+            <% for(let i=results.length/2 ; i < results.length; i++){ %>
+                <div class="card">
+                    <div class="emblem">
+                        <img src="<%= results[i].classEmblem %>" alt="class_emblem">
+                    </div>
+
+                    <div class="card__thumbnail" style="border: 1px inset cornflowerblue; border-radius: 50%;">
+                        <img class="imgbg" src="./img/bg_emblem.png" alt="emblem">
+                        <div class="imgcard">
+                            <img src="<%= results[i].img %>" alt="imgClass">
+                        </div>
+                    </div>
+
+                    <div class="card__info">
+                        <span><%= results[i].class %></span>
+                        <span><%= results[i].name %></span>
+                    </div>
+
+                    <div class="card__button">
+                        <a href="./class_content/saber.html" class="btn btn__view">
+                            <span class="btn__icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                            <span class="btn__name">View</span>
+                        </a>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
